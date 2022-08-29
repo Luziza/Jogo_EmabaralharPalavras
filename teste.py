@@ -8,14 +8,21 @@ def Embaralhar(palavra):
     print(novo.lower())
 
     
-palavra = "maluca"
+palavra = "atumalaca"
 Embaralhar(palavra)
 
-resposta = print(input("Digite a resposta: "))
 
-if resposta == Embaralhar(palavra):
-    print("Acertou!")
-elif resposta != Embaralhar(palavra):
-    print("Tente novamente!")
+
+
+for i in range(5):
+    resposta =(input("Digite a resposta: "))
+    if resposta == palavra:
+        print("Acertou!")
+        break
+    elif resposta != palavra:
+        print("Tente novamente!")
+    if i == 4:
+        print("A resposta certa era " + palavra)
+
 
 
