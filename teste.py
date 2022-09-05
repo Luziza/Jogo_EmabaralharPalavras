@@ -2,7 +2,7 @@ import random
 
 
 
-def Embaralhar(palavra):
+def Embaralhar():
     novo = list(palavra)
     random.shuffle(novo)
     novo = "".join(novo)
@@ -15,7 +15,7 @@ def Ajuda():
 
     
 palavra = "atumalaca"
-Embaralhar(palavra)
+Embaralhar()
 
 
 for i in range(5):

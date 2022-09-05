@@ -8,31 +8,37 @@ def Temas():
     escolha = input("Escolha o tema: ")
 
     if escolha == cidade:
-        
+        escolhido = list(cidade[0])
+        random.shuffle(escolhido)
+        escolhido = "".join(escolhido)
+        print(escolhido)
+    elif escolha == cores:
+        escolhido = list(cores[0])
+        random.shuffle(escolhido)
+        escolhido = "".join(escolhido)
+        print(escolhido.lower())
+    elif escolha == paises:
+        escolhido = list(paises[0])
+        random.shuffle(escolhido)
+        escolhido = "".join(escolhido)
+        print(escolhido.lower())
 
-def Embaralhar(palavra):
-    novo = list(palavra)
-    random.shuffle(novo)
-    novo = "".join(novo)
-    print(novo.lower())
 
 def Ajuda():
     lista = ["Você consegue", "Tente novamente", "A maior prova de coragem é suportar as derrotas sem perder o ânimo.", "Acredite que você pode, assim você já está no meio do caminho."]
     random.shuffle(lista)
     return lista[0]
 
-    
-palavra = "atumalaca"
-Embaralhar(palavra)
+Temas()
 
 
 for i in range(5):
     resposta =(input("Digite a resposta: "))
-    if resposta == palavra:
+    if resposta == Temas():
         print("Acertou! Você utilizou " + str(i) + " tentivas")
         break
-    elif resposta != palavra:
+    elif resposta != Temas():
         print(Ajuda())
     if i == 4:
-        print("A resposta certa era " + palavra)
+        print("A resposta certa era " + Temas())
 
